@@ -25,15 +25,15 @@
  *
  * a) Install for current user only
  *
- * Windows: %APPDATA%\vlc\lua\extensions\
- * Linux:   ~/.local/share/vlc/lua/extensions/
- * macOS:   /Users/<your_name>/Library/Application Support/org.videolan.vlc/lua/extensions/
+ * Windows: %APPDATA%\vlc\lua\extensions
+ * Linux: ~/.local/share/vlc/lua/extensions
+ * macOS: /Users/<your_name>/Library/Application Support/org.videolan.vlc/lua/extensions
  *
  * b) Install for all users
  *
- * Windows: %ProgramFiles%\VideoLAN\VLC\lua\extensions\
- * Linux:   /usr/lib/vlc/lua/extensions/
- * macOS:   /Applications/VLC.app/Contents/MacOS/share/lua/extensions/
+ * Windows: %ProgramFiles%\VideoLAN\VLC\lua\extensions
+ * Linux: /usr/lib/vlc/lua/extensions
+ * macOS: /Applications/VLC.app/Contents/MacOS/share/lua/extensions
 --]]
 
 require('common')
@@ -180,7 +180,7 @@ function get_livestreams()
 		s = data:read(BUF_SIZE)
 	end
 	res = json.decode(res)
-    vlc.playlist.clear()
+	vlc.playlist.clear()
 	local tmp = {}
 	local results = res['result']['results']
 	for _, track in ipairs(results) do
@@ -251,8 +251,8 @@ function click_search()
 	res = json.decode(res)
 
 	if repl:get_checked() then
-    	vlc.playlist.clear()
-    end
+		vlc.playlist.clear()
+	end
 
 	local filters = {}
 	v = exclude:get_text()
