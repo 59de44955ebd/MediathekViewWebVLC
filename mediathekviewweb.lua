@@ -253,11 +253,6 @@ function click_search()
 	if repl:get_checked() then
     	vlc.playlist.clear()
     end
-	local pl = {}
-	local results = res['result']['results']
-
-	v = qual:get_value()
-	local p
 
 	local filters = {}
 	v = exclude:get_text()
@@ -267,6 +262,11 @@ function click_search()
 			if s == '' then break end
 		end
 	end
+
+	local pl = {}
+	local results = res['result']['results']
+	v = qual:get_value()
+	local p
 
 	local cnt = 0
 	for _, track in ipairs(results) do
