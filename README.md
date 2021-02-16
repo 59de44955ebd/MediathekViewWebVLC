@@ -1,5 +1,8 @@
 # MediathekViewWebVLC
-MediathekViewWeb Lua extension for VLC
+
+This Lua extension for VLC allows to search for videos in the media libraries of german public TV stations. Additionally, it can also be used to watch the livestreams of those TV stations.
+
+It's based on [MediathekViewWeb](https://mediathekviewweb.de/) and its JSON API. Since VLC's vlc.stream Lua module doesn't support POST request, [Patrick Hein](https://github.com/bagbag) kindly added an additional GET query endpoint to MediathekViewWeb.
 
 **Requirements**
 
