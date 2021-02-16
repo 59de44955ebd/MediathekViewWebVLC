@@ -7,7 +7,7 @@ VLC 3.x
 
 **Installation**
 
-To install, place this file in the following directory, depending on your operating system:
+To install, place file "mediathekviewweb.lua" in the following directory, depending on your operating system:
 
 a) Install for current user only
 
@@ -23,6 +23,10 @@ macOS:   /Applications/VLC.app/Contents/MacOS/share/lua/extensions/
 
 **Screenshots**
 
-  ![](screenshots/vlc01.jpg)
+* MediathekViewWebVLC Search in VLC 3.0.12/Win 8.1:
+
   ![](screenshots/vlc01.jpg)
 
+* MediathekViewWebVLC listing Livestreams in VLC 3.0.12/Win 8.1:
+
+  ![](screenshots/vlc02.jpg)
