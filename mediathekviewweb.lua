@@ -103,7 +103,7 @@ end
 function new_dialog(dtitle)
 	dlg = vlc.dialog(dtitle)
 
-	local w = 8
+	local w = 1
 	local row = 0
 
 	row = row +1
@@ -142,7 +142,7 @@ function new_dialog(dtitle)
 
 	row = row +1
 	dlg:add_label('Exclude:', 1, row, 1, 1)
-	exclude = dlg:add_text_input('(mit Untertitel)|(Audiodeskription)', 2, row, w, 1)
+	exclude = dlg:add_text_input('', 2, row, w, 1)
 
 	row = row +1
 	repl = dlg:add_check_box('Replace existing playlist', true, 1, row, 1 + w, 1)
@@ -263,12 +263,11 @@ function click_search()
 		end
 	end
 
+	local p
 	local pl = {}
+	local cnt = 0
 	local results = res['result']['results']
 	v = qual:get_value()
-	local p
-
-	local cnt = 0
 	for _, track in ipairs(results) do
 		-- ignore items with title or topic that match exclude filters
 		filtered = false
